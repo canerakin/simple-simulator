@@ -1,0 +1,4 @@
+	load R1, 00000101b
+	load R2, 00000010b
+	or   R3, R1, R2
+	halt

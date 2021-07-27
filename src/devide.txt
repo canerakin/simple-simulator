@@ -1,0 +1,13 @@
+	load R1, 8
+	load R2, 2
+	load R3, 1
+	load RE, 48	
+
+bol:	jmpEQ R1=R0, son
+	addi R0, R0, R2
+	addi R4, R4, R3	
+	jmp bol
+
+son:	addi R4, RE, R4
+	move RF, R4
+	halt

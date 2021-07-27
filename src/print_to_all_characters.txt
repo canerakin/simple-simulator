@@ -1,0 +1,13 @@
+	load R0, 65
+	load R1, 90
+	load R2, 1
+	
+print: 
+	move RF, R0
+	jmpEQ R1=R0, x
+	addi R0, R0, R2
+	load RF, 10
+	jmp print
+
+x:	
+	halt

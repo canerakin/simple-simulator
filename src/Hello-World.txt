@@ -1,0 +1,13 @@
+	load R0, 0
+	load R1, text
+	load R2, 1
+
+print: 	load RF, [R1]
+	addi R1, R1, R2
+	jmpEQ R1=R0, bitir
+	jmp print
+
+bitir:	halt
+
+text: 	db "Hello World!", 0
+
